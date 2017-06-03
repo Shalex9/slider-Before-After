@@ -61,23 +61,27 @@
 		<section class="sketch">
 			<div class="dropdown">
 				<div class="sprite sprite-arrive-down">
-
-				</div>
-
-				<div class="range">
-					<p>Realistic</p>
-					<p>Vivid</p>
+					<ul class="nav">
+						<li class="nav__item"><a class="nav__link">Brightness</a></li>
+						<li class="nav__item"><a class="nav__link">Contrast</a></li>
+						<li class="nav__item"><a class="nav__link">All effects</a></li>
+					</ul>
 				</div>
 			</div>
 
-			<div>
+			<div class="range-box flex-space-between">
+				<p>Realistic</p>
+				<div class="range">
+
+				</div>
+				<p>Vivid</p>
+
 				<input type="button" class="btn apply pointer" value="Apply to All">
 			</div>
-			545865
 		</section>
 
 		<section class="slider-images flex-space-between">
-			<div class="sprite carousel-arrive-left"></div>
+			<div class="sprite carousel-arrive-left pointer"></div>
 			<div class="carousel-hider">
 				<ul class="carousel-list">
 					<li class="carousel-element"><img class="to-preview" src="images/01.jpg" alt=""></li>
@@ -94,11 +98,12 @@
 					<li class="carousel-element"><img class="to-preview" src="images/05.jpg" alt=""></li>
 				</ul>
 			</div>
-			<div class="sprite carousel-arrive-right"></div>
+			<div class="sprite carousel-arrive-right pointer"></div>
 		</section>
 
 
 		<script src="js/jquery-2.1.1.js"></script>
+		<script src="js/jquery-ui.min.js"></script>
 		<script src="js/script.js"></script>
 	</body>
 </html>

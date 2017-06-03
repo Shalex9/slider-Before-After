@@ -211,9 +211,13 @@ header {
   background: #434651;
   .dropdown {
     position: relative;
+    float: left;
     width: 60px;
     height: 100%;
-    border-right: 2px solid gray;
+    border-right: 2px solid #7d818b;
+    &:hover{
+      cursor: pointer;
+    }
     .sprite-arrive-down {
       position: absolute;
       top: 50%;
@@ -222,12 +226,58 @@ header {
       width: 19px;
       height: 11px;
       background-position: -3px -3px;
+      z-index: 3;
+    }
+    .nav {
+      display: none;
+      position: absolute;
+      top: 33px;
+      left: -19px;
+      width: 130px;
+      z-index: 2;
+      &__item {
+        display: block;
+        color: #7d818b;
+        :hover {
+          background-color: #7d818b;
+          color: #000;
+          cursor: pointer;
+        }
+        &:not(:first-child){
+          border-top: 2px solid #7d818b;
+        }
+      }
+      &__link {
+        display: block;
+        font-size: 18px;
+        padding: 0 20px;
+        line-height: 47px;
+      }
+    }
+  }
+  .range-box {
+    justify-content: center;
+    margin-right: 62px;
+    line-height: 55px;
+    p{
+      font-size: 22px;
+      padding: 0 15px;
+      color: #878b94;
+    }
+    .range {
+      width: 300px;
+      height: 5px;
+      background: #000;
     }
   }
   .apply {
+    margin-right: -100px;
+    margin-left: 45px;
+    color: #878b94;
     background: #545865;
   }
   .apply:hover {
+    color: #000;
     background: #7d818b;
   }
 }

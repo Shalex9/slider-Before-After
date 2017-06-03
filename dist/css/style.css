@@ -187,9 +187,12 @@ header {
   background: #434651; }
   .sketch .dropdown {
     position: relative;
+    float: left;
     width: 60px;
     height: 100%;
-    border-right: 2px solid gray; }
+    border-right: 2px solid #7d818b; }
+    .sketch .dropdown:hover {
+      cursor: pointer; }
     .sketch .dropdown .sprite-arrive-down {
       position: absolute;
       top: 50%;
@@ -197,10 +200,50 @@ header {
       margin: -5px -10px;
       width: 19px;
       height: 11px;
-      background-position: -3px -3px; }
+      background-position: -3px -3px;
+      z-index: 3; }
+    .sketch .dropdown .nav {
+      display: none;
+      position: absolute;
+      top: 33px;
+      left: -19px;
+      width: 130px;
+      z-index: 2; }
+      .sketch .dropdown .nav__item {
+        display: block;
+        color: #7d818b; }
+        .sketch .dropdown .nav__item :hover {
+          background-color: #7d818b;
+          color: #000;
+          cursor: pointer; }
+        .sketch .dropdown .nav__item:not(:first-child) {
+          border-top: 2px solid #7d818b; }
+      .sketch .dropdown .nav__link {
+        display: block;
+        font-size: 18px;
+        padding: 0 20px;
+        line-height: 47px; }
+  .sketch .range-box {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-right: 62px;
+    line-height: 55px; }
+    .sketch .range-box p {
+      font-size: 22px;
+      padding: 0 15px;
+      color: #878b94; }
+    .sketch .range-box .range {
+      width: 300px;
+      height: 5px;
+      background: #000; }
   .sketch .apply {
+    margin-right: -100px;
+    margin-left: 45px;
+    color: #878b94;
     background: #545865; }
   .sketch .apply:hover {
+    color: #000;
     background: #7d818b; }
 
 .slider-images {

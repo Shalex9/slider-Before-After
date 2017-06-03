@@ -126,4 +126,8 @@ jQuery(document).ready(function($){
 
     })
 
+    $(".dropdown")
+          .mouseenter(function(){$('.nav').slideDown(200).animate({backgroundColor: '#434651'},400)})
+          .mouseleave(function(){$('.nav').slideUp(200).animate({backgroundColor: '#7d818b'},400)});
+
 });
