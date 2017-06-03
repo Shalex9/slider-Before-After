@@ -1,0 +1,40 @@
+{
+  "name": "final_exam",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "gulp": "./node_modules/gulp/bin/gulp.js"
+  },
+  "author": "Shalex",
+  "license": "ISC",
+  "devDependencies": {
+    "auto": "^0.1.2",
+    "babel-core": "^6.18.2",
+    "babel-preset-es2015": "^6.18.0",
+    "browser-sync": "^2.18.1",
+    "gm": "^1.23.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^3.1.1",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-rigger": "^0.5.8",
+    "gulp-sass": "^2.3.2",
+    "gulp-sourcemaps": "^2.2.0",
+    "gulp-spritesmith": "^6.2.1",
+    "gulp-uglify": "^2.0.0",
+    "gulp-watch": "^4.3.11",
+    "gulp.spritesmith": "^6.2.1",
+    "imagemin-pngquant": "^5.0.0",
+    "imagesloaded": "^4.1.1",
+    "isotope-layout": "^3.0.1",
+    "isotope-packery": "^2.0.0",
+    "masonry-layout": "^4.1.1"
+  },
+  "dependencies": {
+    "hover.css": "^2.0.2"
+  }
+}
