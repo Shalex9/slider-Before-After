@@ -14,11 +14,15 @@ body {
       -ms-flex-align: center;
           align-items: center; }
 
+a,
 .pointer {
   cursor: pointer; }
 
 .active {
   color: #9adb4d; }
+
+input {
+  outline: 0; }
 
 .sprite {
   background-image: url("../images/sprite-icon.png");
@@ -42,7 +46,7 @@ header {
       -ms-flex-direction: row;
           flex-direction: row;
   margin-bottom: 20px;
-  background: #4f5462; }
+  background: #434651; }
   header .header-left .window-btn__list {
     margin: auto 20px; }
     header .header-left .window-btn__list .close {
@@ -58,7 +62,7 @@ header {
     height: 18px;
     border-radius: 50%; }
   header .header-left .load-photo {
-    color: #000;
+    color: #000000;
     background-color: #9adb4d; }
   header .header-left .load-photo:hover {
     background-color: #42ca35; }
@@ -84,7 +88,8 @@ header {
       color: #9ea1a9;
       background-color: #5f6472; }
     header .header-right .export:hover {
-      background-color: #7d818b; }
+      color: #5f6472;
+      background-color: #9ea1a9; }
   header .sprite-cut {
     width: 22px;
     height: 20px;
@@ -134,9 +139,9 @@ header {
 .container-preview {
   position: relative;
   width: 100%;
-  max-width: 890px;
+  max-width: 703px;
   margin: 0 auto;
-  height: 450px;
+  height: 355px;
   margin-top: 20px; }
   .container-preview .resize-box {
     position: absolute;
@@ -154,12 +159,14 @@ header {
     background-color: #9adb4d;
     left: 50%;
     top: -2%; }
+    .container-preview .handle:hover {
+      cursor: ew-resize; }
   .container-preview .handle:before,
   .container-preview .handle:after {
     content: "Before";
     position: relative;
     top: 10px;
-    color: #ccc;
+    color: #7d818b;
     font-size: 22px;
     text-transform: uppercase;
     float: right;
@@ -177,23 +184,23 @@ header {
     background-size: cover;
     height: 100%; }
   .container-preview .after-img {
-    -webkit-filter: brightness(130%) contrast(130%);
-            filter: brightness(130%) contrast(130%); }
+    -webkit-filter: brightness(140%) contrast(140%);
+            filter: brightness(140%) contrast(140%); }
 
-.sketch {
+.settings {
   width: 100%;
-  height: 55px;
+  height: 40px;
   margin-top: 20px;
   background: #434651; }
-  .sketch .dropdown {
+  .settings .dropdown {
     position: relative;
     float: left;
     width: 60px;
     height: 100%;
     border-right: 2px solid #7d818b; }
-    .sketch .dropdown:hover {
+    .settings .dropdown:hover {
       cursor: pointer; }
-    .sketch .dropdown .sprite-arrive-down {
+    .settings .dropdown .sprite-arrive-down {
       position: absolute;
       top: 50%;
       left: 50%;
@@ -202,52 +209,63 @@ header {
       height: 11px;
       background-position: -3px -3px;
       z-index: 3; }
-    .sketch .dropdown .nav {
+    .settings .dropdown .nav {
       display: none;
       position: absolute;
-      top: 33px;
+      top: 25px;
       left: -19px;
-      width: 130px;
+      width: 120px;
       z-index: 2; }
-      .sketch .dropdown .nav__item {
+      .settings .dropdown .nav__item {
         display: block;
         color: #7d818b; }
-        .sketch .dropdown .nav__item :hover {
+        .settings .dropdown .nav__item :hover {
           background-color: #7d818b;
-          color: #000;
+          color: #000000;
           cursor: pointer; }
-        .sketch .dropdown .nav__item:not(:first-child) {
+        .settings .dropdown .nav__item:not(:first-child) {
           border-top: 2px solid #7d818b; }
-      .sketch .dropdown .nav__link {
+      .settings .dropdown .nav__link {
         display: block;
-        font-size: 18px;
+        font-size: 14px;
         padding: 0 20px;
-        line-height: 47px; }
-  .sketch .range-box {
+        line-height: 30px; }
+  .settings .range-box {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    margin-right: 62px;
-    line-height: 55px; }
-    .sketch .range-box p {
-      font-size: 22px;
+    margin-right: 40px;
+    line-height: 40px; }
+    .settings .range-box p {
+      font-size: 20px;
       padding: 0 15px;
-      color: #878b94; }
-    .sketch .range-box .range {
-      width: 300px;
-      height: 5px;
-      background: #000; }
-  .sketch .apply {
+      color: #9ea1a9; }
+    .settings .range-box .range {
+      width: 300px; }
+    .settings .range-box input[type=range] {
+      -webkit-appearance: none;
+      width: 100%;
+      height: 7px;
+      background-color: #000000; }
+    .settings .range-box input[type=range]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      background-color: #9adb4d;
+      border: 1px solid #000000;
+      width: 20px;
+      height: 20px;
+      border-radius: 10px;
+      cursor: pointer; }
+  .settings .apply {
     margin-right: -100px;
     margin-left: 45px;
-    color: #878b94;
-    background: #545865; }
-  .sketch .apply:hover {
-    color: #000;
-    background: #7d818b; }
+    color: #9ea1a9;
+    background: #5f6472; }
+  .settings .apply:hover {
+    color: #5f6472;
+    background: #9ea1a9; }
 
 .slider-images {
-  padding: 20px;
+  padding: 10px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -255,7 +273,7 @@ header {
       -ms-flex-align: start;
           align-items: flex-start; }
   .slider-images .carousel-hider {
-    width: 1199px;
+    width: 1004px;
     overflow: hidden;
     float: left; }
   .slider-images .carousel-list {
@@ -265,24 +283,24 @@ header {
     position: relative; }
   .slider-images .carousel-element {
     display: block;
-    margin-right: 25px;
+    margin-right: 20px;
     float: left;
     border: 3px solid transparent; }
   .slider-images .carousel-element .to-preview {
-    max-width: 275px;
-    max-height: 138px;
+    max-width: 230px;
+    max-height: 116px;
     overflow: hidden;
     cursor: pointer; }
   .slider-images .carousel-arrive-left, .slider-images .carousel-arrive-right {
     float: left;
     display: block;
-    margin: 15px;
+    margin: 8px;
     width: 15px;
     height: 50px;
     background: url("../images/sprite-icon.png") no-repeat;
     background-size: cover;
     padding: 5px;
-    margin-top: 50px; }
+    margin-top: 40px; }
   .slider-images .carousel-arrive-left {
     background-position: -50px -3px; }
   .slider-images .carousel-arrive-right {
@@ -293,3 +311,21 @@ header {
     margin-right: 25px; }
   .slider-images .carousel-arrow-right {
     margin-left: 25px; }
+
+@media (min-width: 1367px) and (max-width: 1550px) {
+  .container-preview {
+    max-width: 813px;
+    height: 410px; }
+  .settings {
+    height: 55px; }
+    .settings .dropdown .nav {
+      top: 33px; }
+    .settings .range-box {
+      line-height: 55px; }
+      .settings .range-box p {
+        font-size: 22px; } }
+
+@media (min-width: 1550px) and (max-width: 2700px) {
+  .container-preview {
+    max-width: 990px;
+    height: 500px; } }

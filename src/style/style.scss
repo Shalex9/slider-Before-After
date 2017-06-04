@@ -1,6 +1,8 @@
+@import "variables";
+
 body {
   box-sizing: border-box;
-  background-color: #30313a;
+  background-color: $bodyGray;
   font-family: 'Alegreya Sans', sans-serif;
 }
 .flex-space-between {
@@ -8,11 +10,15 @@ body {
   justify-content: space-between;
   align-items: center;
 }
+a,
 .pointer {
   cursor: pointer;
 }
 .active {
-  color: #9adb4d;
+  color: $green;
+}
+input {
+  outline: 0;
 }
 .sprite {
     background-image: url('../images/sprite-icon.png');
@@ -34,7 +40,7 @@ header {
   height: 55px;
   flex-direction: row;
   margin-bottom: 20px;
-  background: #4f5462;
+  background: $gray;
   .header-left {
     .window-btn__list {
       margin: auto 20px;
@@ -56,8 +62,8 @@ header {
       border-radius: 50%;
     }
     .load-photo {
-      color: #000;
-      background-color: #9adb4d;
+      color: $black;
+      background-color: $green;
     }
     .load-photo:hover{
       background-color: #42ca35;
@@ -70,7 +76,7 @@ header {
     }
     .persent {
       margin-left: 20px;
-      color: #9ea1a9;
+      color: $easyGray;
       font-size: 22px;
     }
   }
@@ -87,11 +93,12 @@ header {
       background-size: contain;
     }
     .export {
-      color: #9ea1a9;
-      background-color: #5f6472;
+      color: $easyGray;
+      background-color: $darkGray;
     }
     .export:hover{
-      background-color: #7d818b;
+      color: $darkGray;
+      background-color: $easyGray;
     }
   }
 
@@ -155,9 +162,9 @@ header {
 .container-preview {
   position: relative;
   width: 100%;
-  max-width: 890px;
+  max-width: 703px;
   margin: 0 auto;
-  height: 450px;
+  height: 355px;
   margin-top: 20px;
   .resize-box {
     position: absolute;
@@ -172,16 +179,19 @@ header {
     position: absolute;
     height: 104%;
     width: 4px;
-    background-color: #9adb4d;
+    background-color: $green;
     left: 50%;
     top: -2%;
+    &:hover {
+      cursor: ew-resize;
+    }
   }
   .handle:before,
   .handle:after {
     content: "Before";
     position: relative;
     top: 10px;
-    color: #ccc;
+    color: $middleGray;
     font-size: 22px;
     text-transform: uppercase;
     float: right;
@@ -201,20 +211,20 @@ header {
     background-size: cover;
     height: 100%;
   }
-  .after-img {filter: brightness(130%) contrast(130%);}
+  .after-img {filter: brightness(140%) contrast(140%);}
 }
 
-.sketch {
+.settings {
   width: 100%;
-  height: 55px;
+  height: 40px;
   margin-top: 20px;
-  background: #434651;
+  background: $gray;
   .dropdown {
     position: relative;
     float: left;
     width: 60px;
     height: 100%;
-    border-right: 2px solid #7d818b;
+    border-right: 2px solid $middleGray;
     &:hover{
       cursor: pointer;
     }
@@ -231,63 +241,76 @@ header {
     .nav {
       display: none;
       position: absolute;
-      top: 33px;
+      top: 25px;
       left: -19px;
-      width: 130px;
+      width: 120px;
       z-index: 2;
       &__item {
         display: block;
-        color: #7d818b;
+        color: $middleGray;
         :hover {
-          background-color: #7d818b;
-          color: #000;
+          background-color: $middleGray;
+          color: $black;
           cursor: pointer;
         }
         &:not(:first-child){
-          border-top: 2px solid #7d818b;
+          border-top: 2px solid $middleGray;
         }
       }
       &__link {
         display: block;
-        font-size: 18px;
+        font-size: 14px;
         padding: 0 20px;
-        line-height: 47px;
+        line-height: 30px;
       }
     }
   }
   .range-box {
     justify-content: center;
-    margin-right: 62px;
-    line-height: 55px;
+    margin-right: 40px;
+    line-height: 40px;
     p{
-      font-size: 22px;
+      font-size: 20px;
       padding: 0 15px;
-      color: #878b94;
+      color: $easyGray;
     }
     .range {
       width: 300px;
-      height: 5px;
-      background: #000;
+    }
+    input[type=range] {
+      -webkit-appearance: none;
+      width: 100%;
+      height: 7px;
+      background-color: $black;
+    }
+    input[type=range]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      background-color: $green;
+      border: 1px solid $black;
+      width: 20px;
+      height: 20px;
+      border-radius: 10px;
+      cursor: pointer;
     }
   }
   .apply {
     margin-right: -100px;
     margin-left: 45px;
-    color: #878b94;
-    background: #545865;
+    color: $easyGray;
+    background: $darkGray;
   }
   .apply:hover {
-    color: #000;
-    background: #7d818b;
+    color: $darkGray;
+    background: $easyGray;
   }
 }
 
 .slider-images {
-  padding: 20px;
+  padding: 10px;
   justify-content: center;
   align-items: flex-start;
   .carousel-hider {
-      width: 1199px;
+      width: 1004px;
       overflow: hidden;
       float: left;
   }
@@ -299,26 +322,26 @@ header {
   }
   .carousel-element {
       display: block;
-      margin-right: 25px;
+      margin-right: 20px;
       float: left;
       border: 3px solid transparent;
   }
   .carousel-element .to-preview {
-      max-width: 275px;
-      max-height: 138px;
+      max-width: 230px;
+      max-height: 116px;
       overflow: hidden;
       cursor: pointer;
   }
   .carousel-arrive-left, .carousel-arrive-right {
       float: left;
       display: block;
-      margin: 15px;
+      margin: 8px;
       width: 15px;
       height: 50px;
       background: url('../images/sprite-icon.png') no-repeat;
       background-size: cover;
       padding: 5px;
-      margin-top: 50px;
+      margin-top: 40px;
   }
   .carousel-arrive-left {
       background-position: -50px -3px;
@@ -336,4 +359,34 @@ header {
       margin-left: 25px;
   }
 
+}
+
+
+@media (min-width: 1367px) and (max-width: 1550px) {
+  .container-preview {
+    max-width: 813px;
+    height: 410px;
+  }
+  .settings {
+    height: 55px;
+    .dropdown {
+      .nav {
+        top: 33px;
+      }
+    }
+    .range-box {
+      line-height: 55px;
+      p{
+        font-size: 22px;
+      }
+    }
+  }
+}
+
+
+@media (min-width: 1550px) and (max-width: 2700px) {
+  .container-preview {
+    max-width: 990px;
+    height: 500px;
+  }
 }
