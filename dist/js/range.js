@@ -9,19 +9,17 @@
 		}
 	};
 
-	var _defaults = {
-		onChange: {}
-	};
+	var _defaults = {};
 	var touchstart = 'touchstart mousedown';
 	var touchmove = 'touchmove mousemove';
 	var touch_down = true;
 
-    var methods = {
-        init : function(options) {
+  var methods = {
+    init : function(options) {
 			options = $.extend(true, {}, _defaults, options);
 
 			$(this).each(function() {
-				var currentValue = 0;
+				var currentValue;
 
 				$(this).on(touchstart, function() {
 					touch_down = true;
@@ -39,7 +37,7 @@
 			});
 
 			return this;
-      }
-    };
+    }
+  };
 
 })( jQuery );

@@ -2,6 +2,8 @@ jQuery(document).ready(function($){
 
     $('.slider').mySlider();
 
+    $('.container-preview').beforeAfter();
+
     $('input[type=range]').range({
       onSlide: function(rangeValue) {
         $('.handle').css('left', rangeValue + '%' );

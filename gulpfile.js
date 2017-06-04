@@ -65,9 +65,9 @@ gulp.task('js:build', function () {
     gulp.src(path.src.js)
         .pipe(rigger())
         .pipe(babel())
-        .pipe(sourcemaps.init())
-        .pipe(uglify())
-        .pipe(sourcemaps.write())
+        // .pipe(sourcemaps.init())
+        // .pipe(uglify())
+        // .pipe(sourcemaps.write())
         .pipe(gulp.dest(path.dist.js))
         .pipe(reload({stream: true}));
     // gulp.src(path.src.libs)
